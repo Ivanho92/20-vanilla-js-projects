@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans&family=Noto+Sans:wght@700&family=PT+Sans&display=swap");
+
+:root {
+  box-sizing: border-box;
+
+  --primary-color: #273494;
+  --secondary-color: #ca7ad0;
+  --success-color: #4b9271;
+  --warning-color: #c88239;
+  --danger-color: #f44336;
+  --light-color: #f9f9f9;
+  --grey-color: #808080;
+  --dark-color: #202359;
+  --footer-color: #191919;
+  --separator-color: #d3d3d3;
+
+  --title-font: "Noto Sans", sans-serif;
+  --subtitlte-font: "PT Sans", sans-serif;
+  --body-font: "Martel Sans", sans-serif;
+
+  font-family: var(--body-font);
+  background-color: var(--light-color);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-family: var(--title-font);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--subtitlte-font);
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body div.container {
+  flex-grow: 1;
+}
+
+header {
+    margin-bottom: 42px;
+}
+
+footer {
+  border-top: 1px solid var(--separator-color);
+  padding: 1.5em 0;
+  margin-top: 3em;
+  background-color: var(--footer-color);
+  color: var(--light-color);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.project {
+  background-color: #fff;
+  box-shadow: 1px 4px 8px 2px rgb(182 174 174 / 10%);
+  border-radius: 3px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.project:hover {
+    box-shadow: -1px 2px 14px 8px rgb(182 174 174 / 30%)
+  }
+
+.thumbnail {
+    width: 100%;
+    border: 1px solid var(--separator-color);
+    border-radius: 3px;
+}
+
+.btn {
+  font-size: 0.9em;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 3px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+a.btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.btn:hover {
+  color: var(--light-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  transition: background-color 0.1s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--secondary-color);
+  outline: none;
+}
+
+@media (max-width: 940px) {
+  .container {
+    width: 88%;
+  }
+}
+
+@media (max-width: 750px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .project {
+    padding: 24px 18px;
+  }
+}

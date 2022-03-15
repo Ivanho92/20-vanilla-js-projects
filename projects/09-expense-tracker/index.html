@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Expense Tracker</title>
+
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- MAIN -->
+  <div class="container">
+    <header class="title">
+      <h1>Expense Tracker</h1>
+      <p>20 Web Projects with Vanilla Javascript - Project #09</p>
+    </header>
+
+    <main>
+      <h2>YOUR BALANCE</h2>
+      <p id="balance" class="balance">150.000€</p>
+
+      <div class="income-expense">
+        <div class="income">
+          <p>Income</p>
+          <p id="income">300.000€</p>
+        </div>
+        <div class="expense">
+          <p>Expense</p>
+          <p id="expense">150.000€</p>
+        </div>
+      </div>
+
+      <h3 id="history">History</h3>
+      <div class="transactions" id="transactions"></div>
+
+
+      <h3>Add a new transaction</h3>
+      <form id="new-transaction">
+        <div class="form-row">
+          <label for="description">Description</label>
+          <input id="description" type="text" name="description" placeholder="Enter description..." required>
+        </div>
+
+        <div class="form-row">
+          <label for="amount">Amount</label>
+          <input id="amount" type="number" name="amount" placeholder="Enter amount..." required>
+          <p class="helptext">For expenses, type in a negative number</p>
+        </div>
+
+        <div class="form-row">
+          <button type="submit">Add transaction</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal-1" aria-hidden="true">
+    <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header>
+          <button aria-label="Close modal" data-micromodal-close class="fa-solid fa-x"></button>
+        </header>
+        <div id="modal-1-content">
+          <h3>Actions</h3>
+          <button id="delete">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
