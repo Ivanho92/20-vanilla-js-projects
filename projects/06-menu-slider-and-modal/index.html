@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Menu Slider and Modal</title>
+  
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="user">
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <button class="toggle" id="toggle">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+
+    <div class="title">
+      <h1>Menu Slider and Modal</h1>
+      <h2>20 Web Projects with Vanilla Javascript - Project #6</h2>
+    </div>
+
+    <button class="cta-btn" id="open">Sign Up</button>
+  </header>
+
+  <div class="container">
+    <h2>What is this landing page about?</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rerum laboriosam at ex tenetur, odio assumenda nesciunt pariatur ullam quaerat tempora facere cupiditate iusto nemo sit sint provident quibusdam corrupti.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est officia eveniet ut nobis, quae reprehenderit quidem debitis iure ad.</p>
+
+    <h2>Tell Me More</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quae illum sequi dolorum! Fuga, commodi, nesciunt optio soluta voluptatem sunt totam id eligendi ratione ea tempora placeat eos ad. Illum est officia vero saepe ipsum rerum similique velit molestiae sequi!</p>
+
+    <h2>Benefits</h2>
+    <ul>
+      <li>Lifetime Access</li>
+      <li>30 Day Money Back</li>
+      <li>Tailored Customer Support</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere animi eius hic voluptatibus eaque. Voluptas quod veniam tempore neque illo officiis odio velit. Nihil eius molestias ullam autem vero tempore?</p>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-container" id="modal">
+    <div class="modal">
+      <button class="close-btn" id="close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>Sign Up</h3>
+      </div>
+      <div class="modal-content">
+        <p>Register with us to get offers, support and more</p>
+        <form class="modal-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Name" id="name" class="form-input">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input autocomplete="username" type="email" placeholder="Enter Email" id="email" class="form-input">
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input autocomplete="new-password" type="password" placeholder="Enter Password" id="password" class="form-input">
+          </div>
+          <div>
+            <label for="password-confirmation">Confirm Password</label>
+            <input autocomplete="new-password" type="password" placeholder="Confirm Password" id="password-confirmation" class="form-input">
+          </div>
+          <input type="submit" value="Submit" class="submit-btn">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

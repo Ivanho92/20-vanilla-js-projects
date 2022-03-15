@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hangman Game</title>
+
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="title">
+    <h1>Hangman Game</h1>
+    <h2>20 Web Projects with Vanilla Javascript - Project #7</h2>
+  </div>
+
+  <p>Find the hidden word - Enter a letter</p>
+
+  <div class="game-container">
+    <svg height="250" width="200" class="figure-container">
+      <!-- Structure -->
+      <line x1="20" y1="220" x2="100" y2="220"></line>
+      <line x1="60" y1="30" x2="60" y2="220"></line>
+      <line x1="60" y1="30" x2="130" y2="30"></line>
+      <line x1="130" y1="30" x2="130" y2="60"></line>
+
+      <!-- Body -->
+      <circle cx="130" cy="80" r="20" class="figure-part"></circle>
+      <line x1="130" y1="100" x2="130" y2="150" class="figure-part"></line>
+      <line x1="100" y1="110" x2="130" y2="125" class="figure-part"></line>
+      <line x1="160" y1="110" x2="130" y2="125" class="figure-part"></line>
+      <line x1="110" y1="180" x2="130" y2="150" class="figure-part"></line>
+      <line x1="150" y1="180" x2="130" y2="150" class="figure-part"></line>
+    </svg>
+
+    <div class="wrong-letters-container">
+      <div id="wrong-letters"></div>
+    </div>
+
+    <div class="word" id="word"></div>
+  </div>
+
+  <div class="popup-container" id="popup-container">
+    <div class="popup">
+      <h2 id="final-message">You won! :)</h2>
+      <button class="play-button" id="play-button">Play Again</button>
+    </div>
+  </div>
+
+  <div class="notification-container" id="notification-container">
+    <p>You have already entered this letter</p>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

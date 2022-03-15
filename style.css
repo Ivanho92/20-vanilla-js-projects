@@ -37,6 +37,7 @@ a:hover {
 
 h1 {
   font-family: var(--title-font);
+  margin-bottom: 6px;
 }
 
 h2,
@@ -46,6 +47,11 @@ h5,
 h6 {
   font-family: var(--subtitlte-font);
   margin-top: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--grey-color);
 }
 
 body {
@@ -60,7 +66,7 @@ body div.container {
 }
 
 header {
-    margin-bottom: 42px;
+    margin-bottom: 32px;
 }
 
 footer {
@@ -69,6 +75,13 @@ footer {
   margin-top: 3em;
   background-color: var(--footer-color);
   color: var(--light-color);
+}
+
+.introduction {
+  padding: 12px 9px;
+  border-top: 1px solid var(--separator-color);
+  border-bottom: 1px solid var(--separator-color);
+  margin-bottom: 32px;
 }
 
 .projects {

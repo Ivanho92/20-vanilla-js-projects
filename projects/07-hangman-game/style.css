@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: #fff;
+    --secondary-color: #2980b9;
+    --grey-color: #808080;
+    --bg-color: #34495e;
+}
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base CSS */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+.title {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.title h2 {
+    filter: brightness(80%);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Project CSS */
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.figure-container {
+    fill: transparent;
+    stroke: var(--primary-color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.figure-part {
+    display: none;
+}
+
+.game-container {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+}
+
+.wrong-letters-container {
+    position: absolute;
+    top: 42px;
+    right: 30px;
+    text-align: right;
+}
+
+.word {
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+}
+
+.letter {
+    border-bottom: 3px solid var(--secondary-color);
+    width: 25px;
+    line-height: 50px;
+    height: 50px;
+}
+
+.notification-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    bottom: -60px;
+    transition: transform 0.3s ease;
+}
+
+.notification-container.show {
+    transform: translateY(-60px);
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup-container.show {
+    display: flex;
+}
+
+.popup {
+    background-color: var(--secondary-color);
+    padding: 30px 70px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 15px 10px 3px rgb(0 0 0 / 10%);
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+}
+
+.popup button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+.play-button:focus {    
+    outline: #FFC83D 3px solid;
+}

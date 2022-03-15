@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Form Validator</title>
+
+    <!-- FAVICON & STYLESHEETS -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Form Validator</h1>
+        <h2>20 Web Projects with Vanilla Javascript - Project #1</h2>
+        <form>
+            <h3>Register with us</h3>
+            <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="username">
+                <small class="input-alert">Error message</small>
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="email">
+                <small class="input-alert">Error message</small>
+            </div>
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="password">
+                <small class="input-alert">Error message</small>
+            </div>
+            <div class="form-row">
+                <label for="password-repeat">Confirm Password</label>
+                <input type="password" id="password-repeat" class="password-repeat">
+                <small class="input-alert">Error message</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+</body>
+</html>

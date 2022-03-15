@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meal Finder</title>
+
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="title">
+      <h1>Meal Finder</h1>
+      <p>20 Web Projects with Vanilla Javascript - Project #8</p>
+    </header>
+  
+    <section class="search">
+      <div class="search-component">
+        <form name="search-form" id="search-form">
+          <input type="text" name="search" id="search" placeholder="Search for a meal">
+          <button type="submit" value="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <button id="random">
+          <i class="fas fa-random"></i>
+        </button>
+      </div>
+      <h2 class="results-heading">Search results for '<span class="searched-keywords" id="searched-keywords">chicken</span>'</h2>
+    </section>
+  
+    <section class="meals" id="meals"></section>
+
+    <aside class="recipe" id="recipe">
+      <a href="#" class="close" id="close">
+        <i class="fas fa-times"></i>
+      </a>
+      <img src="https://via.placeholder.com/700">
+      <div class="bg-recipe">
+        <div class="container">
+          <h2>Chicken Congee</h2>
+          <div class="labels">
+            <p class="category"><span>Category: </span>Chicken</p>
+            <p class="area"><span>Origin: </span>Chinese</p>
+          </div>
+          <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+              <li>Chicken - 8 oz</li>
+              <li>Salt - pinch</li>
+              <li>Pepper - pinch</li>
+              <li>Ginger Cordial - 1 tsp</li>
+              <li>Ginger - 1 tsp</li>
+              <li>Spring Onions - 1 tbs</li>
+              <li>Rice - 1/2 cup</li>
+              <li>Water - 8 cups</li>
+              <li>Coriander - 2 oz</li>
+            </ul>
+          </div>
+          <div class="steps">
+            <h3>Steps</h3>
+            <ol>
+              <li>
+                MARINATING THE CHICKEN In a bowl, add chicken, salt, white pepper, ginger juice and then mix it together well. Set the chicken aside.
+              </li>
+              <li>
+                RINSE THE WHITE RICE Rinse the rice in a metal bowl or pot a couple times and then drain the water.
+              </li>
+              <li>
+                BOILING THE WHITE RICE Next add 8 cups of water and then set the stove on high heat until it is boiling. Once rice porridge starts to boil, set the stove on low heat and then stir it once every 8-10 minutes for around 20-25 minutes. After 25 minutes, this is optional but you can add a little bit more water to make rice porridge to make it less thick or to your preference. Next add the marinated chicken to the rice porridge and leave the stove on low heat for another 10 minutes. After an additional 10 minutes add the green onions, sliced ginger, 1 pinch of salt, 1 pinch of white pepper and stir for 10 seconds. Serve the rice porridge in a bowl Optional: add Coriander on top of the rice porridge.
+              </li>
+            </ol>     
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+
+  
+
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
