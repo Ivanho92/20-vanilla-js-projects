@@ -1,0 +1,245 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+/* VARIABLES */
+:root {
+    --primary-color: #937DF9;
+    --secondary-color: #fff;
+    --success-color: #47C47A;
+    --danger-color: #AE352C;
+    --white-color: #fff;
+    --grey-color: #6A686A;
+    --black-color: #000;
+
+    --bg-color: #ffefea;
+    --font-family: 'Lato', 'Source Sans Pro', sans-serif;
+}
+
+/* CSS INIT */
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 16px 0 24px 0;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title p {
+    margin-top: 6px;
+}
+
+/* MAIN STYLES */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: darksalmon;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.text-box *:focus-visible {
+    outline: 2px solid #fff;
+}
+
+.btn-toggle {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.btn-toggle:focus-visible {
+    outline: 2px solid black;
+}
+
+.text-box {
+    width: 70%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    background-color: rgba(51, 51, 51, 0.98);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+
+.text-box.show {
+    transform: translate(-50%, 0);
+}
+
+.text-box-container {
+    transition: opacity 1s ease, z-index 1.1s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.text-box-container.show {
+    opacity: 1;
+    z-index: 10;
+}
+
+.text-box select {
+    background-color: darksalmon;
+    border: 0;
+    color: #fff;
+    font-size: 12px;
+    height: 30px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.text-box textarea {
+    outline: 0;
+    border: 1px #dadada solid;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px;
+    margin: 15px 0;
+    width: 100%;
+    height: 100px;
+}
+
+.text-box textarea:focus-visible {
+    outline: 2px darksalmon solid;
+}
+
+.text-box .btn {
+    width: 100%;
+}
+
+.text-box h2 {
+    margin-top: 0px;
+}
+
+.text-box .close {
+    background: none;
+    border: none;
+    color: inherit;
+    position: absolute;
+    top: 11px;
+    right: 21px;
+    cursor: pointer;
+    font-size: 1.8em;
+}
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+}
+
+.box {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-out;
+    outline: none;
+}
+
+.box.active {
+    box-shadow: 0 0 10px 5px darksalmon;
+}
+
+.box:focus-visible {
+    outline: 2px solid black;
+}
+
+.box img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    height: 200px;
+    transition: transform 1s ease;
+    z-index: -1;
+}
+
+.box:hover img, .box:focus-visible img {
+    transform: scale(1.1);
+}
+
+.box:hover .info, .box:focus-visible .info {
+    background-color: #df7451;
+}
+
+.box .info {
+    background-color: darksalmon;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 1s ease;
+}
+
+
+
+/* RESPONSIVE DESKTOP */
+@media (max-width: 800px) {
+    /* TABLET */
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    /* MOBILE */
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .text-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -200%);
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .text-box.show {
+        transform: translate(0);
+    }
+}

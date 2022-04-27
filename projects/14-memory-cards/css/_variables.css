@@ -1,0 +1,49 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap');
+
+:root {
+    /* Base size */
+    --base-size: 1rem;
+
+    /* Modular scale */
+    --minor-third: 1.200;
+    --major-third: 1.250;
+    --perfect-fourth: 1.333;
+
+    --ratio: var(--minor-third);
+
+    --s100: calc(var(--s200) / var(--ratio));
+    --s200: calc(var(--s300) / var(--ratio));
+    --s300: calc(var(--s400) / var(--ratio));
+    --s400: var(--base-size);
+    --s500: calc(var(--s400) * var(--ratio));
+    --s600: calc(var(--s500) * var(--ratio));
+    --s700: calc(var(--s600) * var(--ratio));
+    --s800: calc(var(--s700) * var(--ratio));
+    --s900: calc(var(--s800) * var(--ratio));
+
+    /* Measure */
+    --measure: 60ch;
+
+    /* Colors */
+    --color-primary: #5921e6;
+    --color-secondary: #ff6161;
+    
+    --color-success: #47c47a;
+    --color-danger: #ae352c;
+
+    --color-light: #fff;
+    --color-gray-shade: #c4c4c4;
+    --color-gray: #6a686a;
+    --color-dark: #000;
+
+    /* Font Families */
+    --font-base: 'Lato', sans-serif;
+    --font-heading: 'Catamaran', sans-serif;
+    --font-alt: 'Overpass', sans-serif;
+
+    /* Breakpoints */
+    --bp-mobile-large: (max-width: 425px);
+}

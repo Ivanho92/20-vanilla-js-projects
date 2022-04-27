@@ -1,0 +1,16 @@
+.cover {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.cover > * {
+    margin-top: var(--s500);
+    margin-bottom: var(--s500);
+}
+
+.cover > main {
+    margin-top: auto;
+    margin-bottom: auto;
+}

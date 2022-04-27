@@ -1,0 +1,46 @@
+/* Import reset */
+@import url('_reset.css');
+
+/* Import variables and global styles */
+@import url('_variables.css');
+@import url('_globals.css');
+
+/* Import utilities */
+@import url('utilities/_cover.css');
+@import url('utilities/_stack.css');
+@import url('utilities/_wrapper.css');
+@import url('utilities/_flex.css');
+@import url('utilities/_center.css');
+@import url('utilities/_full-bleed.css');
+@import url('utilities/_icon.css');
+
+
+/* Import utilities */
+@import url('blocks/_buttons.css');
+@import url('blocks/_cards.css');
+@import url('blocks/_navigation.css');
+@import url('blocks/_modal.css');
+
+main {
+  max-width: 100%;
+  width: 40rem;
+}
+
+footer {
+  padding-inline: var(--s500);
+}
+
+@media (max-width: 426px) {
+  h1 {
+      font-size: var(--s800);
+  }
+
+  header {
+    align-items: flex-start !important;
+  }
+
+  footer {
+    padding-inline: 0;
+    width: 100% !important;
+  }
+}

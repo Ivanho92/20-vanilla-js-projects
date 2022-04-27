@@ -1,3 +1,6 @@
+/** DEPENDENCIES */
+
+
 /** DOM VARIABLES */
 $transactions = document.querySelector('#transactions');
 $history = document.querySelector('#history');
@@ -129,6 +132,9 @@ function updateUI() {
     printBalance();
 }
 
+/** API FETCH */
+
+
 /** LOCAL STORAGE */
 function ls_getTransactions() {
     const storageTransactions = localStorage.getItem('transactions');
@@ -141,7 +147,7 @@ function ls_updateTransactions() {
     localStorage.setItem('transactions', jsonTransactions);
 }
 
-/** INIT */
+/** APP INIT */
 MicroModal.init();
 ls_getTransactions();
 calculateData();

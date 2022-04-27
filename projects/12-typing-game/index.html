@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Speed Typing Game</title>
+  
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="preload">
+  <div class="container">
+    <header class="title">
+      <h1>Speed Typing Game</h1>
+      <p>20 Web Projects with Vanilla Javascript - Project #12</p>
+    </header>
+  </div>
+
+    <!-- MAIN -->
+    <main class="container">
+      <small>Type the following:</small>
+
+      <h2 id="word">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </h2>
+
+      <input type="text" id="text" autocomplete="off" placeholder="Type the word here...">
+
+      <p class="time-container">
+        Time left: <span id="time">10s</span>
+      </p>
+
+      <p class="score-container">
+        Score: <span id="score">0</span>
+      </p>
+
+      <div id="end-game-container" class="end-game-container"></div>
+    </main>
+
+    <aside>
+      <button id="settings-btn" class="settings-btn">
+        <i class="fas fa-cog"></i>
+      </button>
+
+      <div class="settings" id="settings">
+        <form id="settings-form">
+          <div>
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" id="difficulty" tabindex="-1">
+              <option value="easy">Easy</option>
+              <option value="normal">Normal</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

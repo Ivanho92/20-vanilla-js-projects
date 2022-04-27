@@ -1,0 +1,276 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Lato&display=swap');
+
+/* VARIABLES */
+:root {
+    --primary-color: #937DF9;
+    --secondary-color: #fff;
+    --success-color: #47C47A;
+    --danger-color: #AE352C;
+    --white-color: #fff;
+    --grey-color: #6A686A;
+    --black-color: #000;
+
+    --bg-color: #153965;
+    --card-color: #1D4E89;
+
+    --font-family: 'Lato', 'Source Sans Pro', sans-serif;
+}
+
+/* CSS INIT */
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+*:focus-visible {
+    outline: 2px solid #FF6666;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--bg-color);
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title p {
+    margin-top: 6px;
+}
+
+/* MAIN STYLES */
+h2, p {
+    margin: 0;
+}
+
+main.container {
+    background-color: var(--card-color);
+    position: relative;
+    padding: 26px 0;
+    border-radius: 5px;
+    margin-top: 24px;
+    box-shadow: 0 2px 14px 0 rgba(13, 36, 63, 0.2);
+}
+
+main small {
+    margin-top: 32px;
+    font-size: 0.9em;
+}
+
+main #word {
+    margin: 3px 0;
+    font-size: 2em;
+    height: 40px;
+}
+
+main input {
+    width: 66%;
+    padding: 9px 15px;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+.time-container, .score-container {
+    position: absolute;
+    top: 19px;
+}
+
+.time-container {
+    left: 24px;
+}
+
+.score-container {
+    right: 28px;
+}
+
+aside {
+    width: 100%;
+}
+
+.settings-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1em;
+    padding: 8px 10px;
+    color: rgba(256, 256, 256, 0.8);
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: color 0.1s ease-out, background-color 0.2s ease;
+}
+
+.settings-btn:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .settings-btn:focus-visible {
+    outline: 2px solid #FF6666;
+} */
+
+.settings {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 16px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.settings.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Prevents the animated transition on page load. To be removed then with JavaScript */
+.preload * {
+    transition: none !important;
+}
+
+#settings-form div {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings select {
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+}
+
+
+
+.end-game-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--card-color);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    display: none;
+}
+
+.end-game-container.show {
+    display: flex;
+}
+
+.reset-btn {
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-size: 1em;
+    background-color: #FF6666;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    line-height: 0.9;
+    transition: background-color 0.1s ease;
+}
+
+.reset-btn:hover {
+    background-color: #ff4c4c;
+}
+
+.reset-btn:focus-visible {
+    outline: 2px solid #ffffff;
+}
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 375px) {
+    /* Mobile M */    
+}
+
+@media (min-width: 425px) {
+    /* Mobile L */
+    
+}
+
+@media (min-width: 768px) {
+    /* Tablet */
+    
+}
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+/* SPINNER */
+.spinner {
+    width: 70px;
+    text-align: center;
+  }
+  
+  .spinner > div {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 255, 255);
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }

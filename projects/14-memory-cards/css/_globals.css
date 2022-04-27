@@ -1,0 +1,50 @@
+* {
+    max-width: var(--measure);
+    font-family: var(--font-base);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+    max-width: none;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    max-width: var(--measure);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: var(--s900);
+    font-family: var(--font-heading);
+}
+
+h2 {
+    font-size: var(--s800);
+}
+
+h3 {
+    font-size: var(--s700);
+}
+
+h4 {
+    font-size: var(--s600);
+}
+
+:focus {
+    outline: 2px solid;
+}

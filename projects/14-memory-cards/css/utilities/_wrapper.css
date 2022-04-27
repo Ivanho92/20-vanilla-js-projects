@@ -1,0 +1,11 @@
+.wrapper {
+    /* box-sizing: content-box; */
+
+    max-width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--s400);
+    padding-right: var(--s400);
+}

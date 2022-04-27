@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Speech Text Reader</title>
+  
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="title">
+      <h1>Speech Text Reader</h1>
+      <p>20 Web Projects with Vanilla Javascript - Project #13</p>
+    </header>
+
+    <!-- MAIN -->
+    <button id="toggle" class="btn btn-toggle" onclick="displayTextBox()">Toggle Text Box</button>
+
+    <div id="text-box-container" class="text-box-container">
+        <div id="text-box" class="text-box">
+          <button id="close" class="close" tabindex="-1" onclick="hideTextBox()"><i class="fa-solid fa-xmark"></i></button>
+          <h2>Choose Voice</h2>
+          <select id="voices" tabindex="-1" onchange="setVoice(this)"></select>
+          <textarea id="text" placeholder="Enter text to read..." tabindex="-1"></textarea>
+          <button class="btn" id="read" tabindex="-1" onclick="readCustomText()">Read Text</button>
+        </div>
+    </div>
+
+    <main></main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

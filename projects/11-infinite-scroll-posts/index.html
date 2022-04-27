@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Infinite Scroll Posts</title>
+  
+  <!-- FAVICON & STYLESHEETS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- MAIN -->
+  <div class="container">
+    <header class="title">
+      <h1>Infinite Scroll Posts</h1>
+      <p>20 Web Projects with Vanilla Javascript - Project #11</p>
+    </header>
+
+    <main>
+      <div class="filter-container">
+        <input type="text" id="filter" class="filter" placeholder="Filter posts...">
+      </div>
+    
+      <div id="posts-container"></div>
+  
+      <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </main>  
+  </div>
+
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/616306f334.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

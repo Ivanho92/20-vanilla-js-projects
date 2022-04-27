@@ -1,0 +1,7 @@
+[class*="stack"] > * + * {
+    margin-top: 1em;
+}
+
+.stack--small > * + * {
+    margin-top: .5em;
+}
