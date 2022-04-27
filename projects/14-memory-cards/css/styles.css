@@ -43,4 +43,8 @@ footer {
     padding-inline: 0;
     width: 100% !important;
   }
+
+  form#add-card .btn[type="submit"] {
+    width: 100%;
+  }
 }

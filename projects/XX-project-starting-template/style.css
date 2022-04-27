@@ -1,0 +1,77 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Assistant&family=Lato&display=swap');
+
+/* VARIABLES */
+:root {
+    --primary-color: #937DF9;
+    --secondary-color: #fff;
+    --success-color: #47C47A;
+    --danger-color: #AE352C;
+    --white-color: #fff;
+    --grey-color: #6A686A;
+    --black-color: #000;
+    --bg-color: #F7F5F7;
+
+    --font-family: 'Lato', 'Source Sans Pro', sans-serif;
+}
+
+/* CSS INIT */
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 16px 0;
+    height: 100vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title p {
+    margin-top: 6px;
+}
+
+/* MAIN STYLES */
+
+
+
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 375px) {
+    /* Mobile M */    
+}
+
+@media (min-width: 425px) {
+    /* Mobile L */
+    
+}
+
+@media (min-width: 768px) {
+    /* Tablet */
+    
+}
+
+@media (min-width: 1024px) {
+    /* Laptop */
+    
+}

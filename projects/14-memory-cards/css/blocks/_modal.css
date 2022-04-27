@@ -23,6 +23,16 @@
   .modal {
     background-color: var(--color-light);
     padding: var(--s600);
+    max-width: 90%;
+    width: var(--measure);
+  }
+
+  .modal .flex--between {
+    column-gap: 1rem;
+  }
+
+  .modal h3 {
+    flex: 1 1 9em;
   }
   
   .form-group label {
@@ -35,6 +45,5 @@
     border-radius: 3px;
     font-size: 16px;
     padding: 12px;
-    min-width: 500px;
-    max-width: 100%;
+    width: 100%;
   }
